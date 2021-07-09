@@ -17,7 +17,10 @@ const childVariants: Variants = {
     show: {
         opacity: 1,
         y: 0,
-        transitionDuration: '0.1s'
+        transitionDuration: '0.1s',
+        transition: {
+            scale: {duration: '0.03s'},
+        }
     },
     hidden: { opacity: 0, y: 20 },
 }
@@ -35,7 +38,9 @@ export const Content: React.FC = () => {
         <motion.h1 variants={childVariants} animate="show" initial="hidden">{title}</motion.h1>
         <motion.div animate="show" initial="hidden" variants={variants} className="content-grid">
             {arr.map(item => (
-                <motion.div variants={childVariants} style={{ borderColor: color }} className="card" key={item} onClick={() => dispatch(increase())}>
+                <motion.div whileHover={{ scale: 1.1}} whileTap={{ scale: 1.05, backgroundColor: '#dddddd' }}
+                    variants={childVariants} style={{ borderColor: color }} className="card"
+                    key={item} onClick={() => dispatch(increase())}>
                     <TagIcon />
                     {item}
                 </motion.div>

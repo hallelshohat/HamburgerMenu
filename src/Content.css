@@ -11,24 +11,16 @@
     grid-template-columns: repeat(auto-fit, minmax(3em, 10em));
     column-gap: 1em;
     row-gap: 2em;
+    justify-content: center;
 }
 
 .card {
     border-radius: 1em;
     padding: 1em;
     border: 2px solid;
-    transition: all 0.3s;
     user-select: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     height: 2em;
-}
-
-.card:hover {
-    transform: scale(1.1);
-}
-
-.card:active {
-    background-color: #dddddd;
 }

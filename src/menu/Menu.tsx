@@ -12,6 +12,7 @@ import { useAppSelector } from '../hooks';
 import { merge } from 'lodash';
 import { shallowEqual } from 'react-redux';
 
+
 const itemIcons: Record<keyof MenuItems, Partial<MenuItemType>> = {
     hamburgers: { icon: <HamburgerIcon /> },
     sandwitches: { icon: <SandwitchIcon /> },
@@ -26,7 +27,7 @@ export const Menu: React.FC = () => {
     const items = merge({}, itemsState, itemIcons);
 
     return (
-        <motion.div initial={false} animate={{width: isSmall ? '3.5em' : '14em'}} transition={{ duration: 0.2 }} className="menu"
+        <motion.div initial={false} animate={{ width: isSmall ? '3.5em' : '14em' }} transition={{ duration: 0.2 }} className="menu"
             onMouseEnter={() => { setIsSmall(false) }} onMouseLeave={() => { setIsSmall(true) }}>
             {Object.entries(items).map(([name, item]) => (
                 <div key={item.description}>
