@@ -1,0 +1,36 @@
+.menu {
+    background-color: #e4e4e4;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1em 0.5em 1em 0.5em;
+    position: relative;
+    background-color: #fffcf2;
+    border-radius: 1.25em;
+    user-select: none;
+    cursor: pointer;
+}
+
+.menu-item-selected {
+    background-color: rgb(161, 255, 161) !important;
+}
+
+.menu-item:hover {
+    background-color: #dddacf;
+}
+
+.chip-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.chip-description {
+    overflow: hidden;
+    margin-left: 0.5em;
+}

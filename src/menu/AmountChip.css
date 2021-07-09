@@ -1,0 +1,26 @@
+@keyframes jump {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(1.3)
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.amount-chip {
+    position: absolute;
+    display: flex;
+    top: -0.45em;
+    right: -0.45em;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffafaf;
+    width: 1.3em;
+    height: 1.3em;
+    font-size: 0.9em;
+    animation: jump 0.2s;
+}
