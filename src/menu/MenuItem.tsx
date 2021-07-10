@@ -20,8 +20,9 @@ export const MenuItem: React.FC<Props> = ({ icon, description, iconColor, name, 
     const selected = useAppSelector(state => state.menuReducer.selected === name, shallowEqual);
 
     return (
-        <div className={`menu-item ${selected ? 'menu-item-selected' : ''}`}
-            onClick={() => dispatch(select(name))}>
+        <motion.div whileHover={{backgroundColor: "#dddacf", y: -2, transition: {duration: 0.1}}} 
+            className={`menu-item ${selected ? 'menu-item-selected' : ''}`}
+            onClick={() => {dispatch(select(name))}}>
             <div className="chip-item">
                 <AmountChip amount={amount} />
                 <AnimatePresence>
@@ -38,6 +39,6 @@ export const MenuItem: React.FC<Props> = ({ icon, description, iconColor, name, 
             <div className="chip-description">
                 {description}
             </div>
-        </div>
+        </motion.div>
     )
 }

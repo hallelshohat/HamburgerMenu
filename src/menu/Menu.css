@@ -18,10 +18,6 @@
     background-color: rgb(161, 255, 161) !important;
 }
 
-.menu-item:hover {
-    background-color: #dddacf;
-}
-
 .chip-item {
     position: relative;
     display: flex;

@@ -3,7 +3,7 @@ import { MenuItems } from '../types';
 
 export type MenuState = {
     state: Record<keyof MenuItems, number>,
-    selected: keyof MenuItems,
+    selected?: keyof MenuItems,
     options: MenuItems
 };
 
@@ -15,7 +15,7 @@ const initialState: MenuState = {
         salads: 0,
         sandwitches: 0
     },
-    selected: 'drinks',
+    selected: undefined,
     options: {
         hamburgers: { description: "Hamburgers", iconColor: '#ffdcb9', itemColor: '#ffaa56' },
         sandwitches: { description: "Sandwitches", iconColor: '#cfdcff', itemColor: '#6e95ff' },
@@ -30,7 +30,9 @@ export const menuSlice = createSlice({
     initialState,
     reducers: {
         increase: (state) => {
-            state.state[state.selected]++;
+            if (state.selected) {
+                state.state[state.selected]++;
+            }
         },
         select: (state, action: PayloadAction<keyof MenuItems>) => {
             state.selected = action.payload;
