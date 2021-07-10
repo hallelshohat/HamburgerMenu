@@ -27,10 +27,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
 }
 
 .chip-description {
     overflow: hidden;
     margin-left: 0.5em;
+}
+
+.chip-selected {
+    position: absolute;
+    width: 115%;
+    height: 115%;
+    background-color: #038400;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.icon {
+    z-index: 3;
+    border-radius: 50%;
 }

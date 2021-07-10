@@ -23,4 +23,5 @@
     height: 1.3em;
     font-size: 0.9em;
     animation: jump 0.2s;
+    z-index: 5;
 }
