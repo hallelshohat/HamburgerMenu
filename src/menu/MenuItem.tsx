@@ -26,8 +26,8 @@ export const MenuItem: React.FC<Props> = ({ icon, description, iconColor, name, 
                 <AmountChip amount={amount} />
                 <AnimatePresence>
                     {selected &&
-                        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
+                        <motion.div initial={{ scale: 1 }} animate={{ scale: 1.2 }}
+                            exit={{ scale: 1 }}
                             className="chip-selected" style={{ backgroundColor: itemColor }} />
                     }
                 </AnimatePresence>
